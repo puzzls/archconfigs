@@ -42,6 +42,8 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
+beautiful.useless_gap = -3
+
 
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
@@ -558,3 +560,11 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- PUZZLES INPUT ----:
+
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+--beautiful.useless_gap = 0
+--beautiful.boarder_with = 10
+
+
