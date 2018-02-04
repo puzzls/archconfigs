@@ -56,3 +56,4 @@ fi
 
 # Awesome
 exec awesome
+#exec xfwm4

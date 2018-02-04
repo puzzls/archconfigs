@@ -84,6 +84,7 @@ else
     # dircolors so we need to hardcode some terminals in here.
     case ${TERM} in
     [aEkx]term*|rxvt*|gnome*|konsole*|screen|cons25|*color) use_color=true;;
+    xterm) color_prompt=yes;;
     esac
 fi
 
@@ -99,6 +100,7 @@ if ${use_color} ; then
     alias grep='grep --colour=auto'
     alias egrep='egrep --colour=auto'
     alias fgrep='fgrep --colour=auto'
+    alias ls="ls --color=auto"
 else
     if [[ ${EUID} == 0 ]] ; then
 	# show root@ when we don't have colors
@@ -115,3 +117,4 @@ done
 # Try to keep environment pollution down, EPA loves us.
 unset use_color sh
 
+## USER INPUT ##
